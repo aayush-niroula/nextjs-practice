@@ -1,7 +1,7 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-
-
+@custom-variant dark (&:is(.dark *));
 
 @keyframes typing {
   0% { width: 0 }
@@ -10,11 +10,13 @@
   100% { width: 0 }
 }
 
-
-
 .typewriter {
   overflow: hidden;
   white-space: nowrap;
   width: 50%;
   animation: typing 3s  .7s infinite;
+}
+
+.glow-text {
+  text-shadow: 0 0  #095de4, 0 0 20px #8996ac;
 }

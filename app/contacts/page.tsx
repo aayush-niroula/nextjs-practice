@@ -1,89 +1,81 @@
-import { Facebook, Instagram, Linkedin } from 'lucide-react'
-import React from 'react'
+import { Facebook, Instagram, Linkedin, Mail, Phone, Pin, Twitter } from 'lucide-react'
+
 
 const page = () => {
   return (
-    <div>
-            <div className='bg-black text-white py-20 px-8 w-full min-h-screen'>
-      <h1 className='text-7xl font-medium text-center mb-16'>Contact</h1>
+    <div className='min-h-screen w-full text-white bg-cover bg-center bg-no-repeat'
+      style={{ backgroundImage: "url('/mail.jpg')",}}>
+      <div className='absolute inset-0 bg-black/10'>
+      <h1 className='text-5xl text-black font-bold text-center pt-15'>Get in touch </h1>
+      <p className='text-center font-light text-sm pt-4 pb-4 text-black'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, eum id, dolor debitis error repudiandae autem animi voluptatum rem porro saepe dolorem ea laboriosam dicta impedit hic eos assumenda distinctio?</p>
 
-      <div className='flex flex-col md:flex-row md:justify-between md:items-start gap-12 max-w-5xl mx-auto'>
-        <div className='md:w-1/2'>
-          <h2 className='text-3xl font-semibold mb-4'>I'd love to hear from you!</h2>
-          <p className='text-gray-300'>
-            Whether you have a question, want to collaborate, or just want to say hi, feel free to drop a message.
-          </p>
-        </div>
+<div className='flex justify-evenly  gap-90 pt-10 text-white'>
+        {/* Message wala section start */}
+<div className=' text-white p-6 rounded-2xl backdrop-blur-[2px] '>
+  <h1 className="text-3xl mb-6 text-center">Message Me</h1>
 
-
-        <div className='md:w-1/2'>
-          <form className='flex flex-col gap-6'>
-            <div className='flex flex-col'>
-              <label className='mb-2 text-lg'>Name</label>
-              <input 
-                type='text' 
-                placeholder='Please enter your name' 
-                className='p-3 rounded-lg bg-gray-900 text-white  focus:outline-none focus:ring-2 focus:ring-blue-500'
-              />
-            </div>
-
-            <div className='flex flex-col'>
-              <label className='mb-2 text-lg'>Email</label>
-              <input 
-                type='email' 
-                placeholder='Please enter your email' 
-                className='p-3 rounded-lg  bg-gray-900 text-white  focus:outline-none focus:ring-2 focus:ring-blue-500'
-              />
-            </div>
-
-            <div className='flex flex-col'>
-              <label className='mb-2 text-lg'>Description</label>
-              <textarea 
-                placeholder='Your message...' 
-                rows={5}
-                className='p-3 rounded-lg text-white  bg-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500'
-              />
-            </div>
-
-            <button 
-              type='submit' 
-              className='bg-green-600 w-[100px] p-2 rounded-2xl font-semibold text-black'
-            >
-              Submit
-            </button>
-          </form>
-        </div>
-      </div>
-      <div className='flex mt-6 gap-4 justify-center'>
-        <div className='h-[100px] w-[400px] rounded-xl bg-gray-800 text-center' >
-            <h2 className='font-light text-sm'>EMAIL ME</h2>
-            <h1 className='text-xl underline font-sans'>ayush@gmail.com</h1>
-        </div>
-        <div className='h-[100px] w-[400px] bg-gray-900 rounded-2xl'>
-            <h2 className='text-center mb-1 text-sm '>FIND ME</h2>
-            <div className='flex gap-3 justify-center items-center'>
-                <Linkedin className='bg-green-400 rounded-xl p-1' />
-                <Instagram className='bg-green-400 rounded-xl p-1' />
-                <Facebook className='bg-green-400 rounded-xl p-1' />
-                
-            </div>
-
-
-
-        </div>
-      </div>
-      {/* NEXT SECTION */}
-      <div>
-        <div>
-            <h3>FAQ</h3>
-            <h1>Questions & Answers</h1>
-        </div>
-        <div>
-            
-        </div>
-      </div>
+  <form action="" className="flex flex-col gap-6 w-full max-w-md">
+    <div className="grid grid-cols-3 items-center gap-3">
+      <label className="font-medium">Name</label>
+      <input
+        type="text"
+        placeholder="Your name"
+        className="border rounded-2xl p-2 col-span-2"
+      />
     </div>
+    <div className="grid grid-cols-3 items-center gap-3">
+      <label className="font-medium">Email</label>
+      <input
+        type="text"
+        placeholder="Email here..."
+        className="border rounded-2xl p-2 col-span-2"
+      />
     </div>
+    <div className="grid grid-cols-3 items-start gap-3">
+      <label className="font-medium mt-2">Message</label>
+      <textarea
+        placeholder="Your message"
+        className="border rounded-2xl p-2 col-span-2 h-28"
+      />
+    </div>
+
+    <button type='submit' className='border rounded p-1  w-[100px] bg-blue-800 text-white'>Send Message</button>
+
+  </form>
+</div>
+      <div className='w-[300px] bg-gradient-to-br from-purple-700 to-purple-900  flex flex-col p-6 border rounded-2xl justify-center gap-6 '>
+        <h1 className='text-center font-medium text-2xl'>Contact information</h1>
+        <p className='font-light text-center text-sm '>Email me or call me fron the given contact information</p>
+
+        <div className='flex flex-col gap-6'>
+          <div className='flex gap-8 items-center'>
+           <span><Phone/></span>
+          <p>9827027881</p>
+          </div>
+          <div className='flex gap-8 items-center'>
+           <span><Mail/></span>
+          <p>ayushniroula644@gmail.com</p>
+          </div>
+          <div className='flex gap-8 items-center'>
+           <span><Pin/></span>
+          <p>Letang, Morang</p>
+          </div>
+
+
+          <div className='flex gap-3 pt-10'>
+           <p className='border rounded-full p-1'><Twitter size={20}/></p>
+           <p className='border rounded-full p-1'><Facebook size={20}/></p>
+           <p className='border rounded-full p-1'><Instagram size={20}/></p>
+           <p className='border rounded-full p-1'><Linkedin size={20}/></p>
+          </div>
+        
+        </div>
+      </div>
+
+</div>
+
+    </div>
+      </div>
   )
 }
 
